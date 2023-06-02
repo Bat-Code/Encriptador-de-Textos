@@ -24,9 +24,9 @@ function generarNumeroAleatorio(min, max) {
   }
   
   
-
-var obtenerTexto = () => {
-    var inputText = document.getElementById('textD');
+  
+  var obtenerTexto = () => {
+      var inputText = document.getElementById('textD');
     var texto = inputText.value;
     var nuevaLista = texto.split('');
     var listaIndex = [];
@@ -45,7 +45,8 @@ var obtenerTexto = () => {
         listaEncriptada.push(codeDec);
     }
     var Encriptacion = listaEncriptada.join('')
-    console.log(Encriptacion)
+    var elemento = document.getElementById('divEncrip');
+    elemento.innerHTML = `<p>${Encriptacion}</p>`
 }
 var boton = document.getElementById('certificarEncrip');
 boton.onclick = obtenerTexto;
